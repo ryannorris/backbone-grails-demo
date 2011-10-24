@@ -1,12 +1,10 @@
 package grails.backbone.demo
 
 class PersonController {
-	
-	List<Person> friends
 
     def list = {
 		
-		friends = Person.list()
+		List<Person> friends = Person.list()
 		
 		withFormat {
 			json {
@@ -20,6 +18,7 @@ class PersonController {
 			}
 			
 			html {
+				render(view: 'list', model: [ friends: friends ])
 			}
 		}	
 	}

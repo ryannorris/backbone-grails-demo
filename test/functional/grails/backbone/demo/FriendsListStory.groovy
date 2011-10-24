@@ -61,7 +61,7 @@ scenario "view friend information", {
 		page.friendLink("Misha").click()
 	}
 
-	then "we go to the friend detail page", {	 at FriendDetailPage }
+	then "we go to the friend detail page", { at FriendDetailPage }
 
 	and "their favorite color is displayed", {
 		assert page.favoriteColor.text() == "Red"

@@ -33,12 +33,15 @@ grails.project.dependency.resolution = {
 		test "org.codehaus.geb:geb-spock:$gebVersion"
 		test "org.codehaus.geb:geb-easyb:$gebVersion"
 		test("org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion") { exclude "xml-apis" }
-		test("org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion")
-		test("org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion")
+		test "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
+		test "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
 	}
 
 	plugins {
 		test ":spock:0.5-groovy-1.7"
 		test ":geb:0.6.0"
+		test ":easyb:2.0.5"
+		test ":database-migration:1.0"
+		test ":code-coverage:1.2.4"
 	}
 }

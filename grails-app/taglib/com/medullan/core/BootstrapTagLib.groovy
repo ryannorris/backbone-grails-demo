@@ -1,4 +1,4 @@
-package grails.backbone.demo
+package com.medullan.core
 
 import grails.web.JSONBuilder;
 
@@ -10,7 +10,7 @@ class BootstrapTagLib {
 	 * 
 	 * 
 	 */
-	def jsonify = { attrs, body ->
+	def jsonify = { attrs ->
 		def jsonClosure = {
 			attrs['target']
 		}
