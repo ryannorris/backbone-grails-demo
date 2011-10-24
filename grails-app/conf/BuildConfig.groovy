@@ -35,6 +35,7 @@ grails.project.dependency.resolution = {
 		test("org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion") { exclude "xml-apis" }
 		test "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
 		test "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
+		runtime "mysql:mysql-connector-java:5.1.18"
 	}
 
 	plugins {
