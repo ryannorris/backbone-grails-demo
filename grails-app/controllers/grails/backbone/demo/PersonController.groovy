@@ -1,22 +1,26 @@
 package grails.backbone.demo
 
 class PersonController {
+	
+	List<Person> friends
 
     def list = {
 		
+		friends = Person.list()
+		
 		withFormat {
 			json {
-				List<Person> shown = Person.list()
 				render(contentType: 'application/json') {
 					people = array {
-						shown.each { p ->
+						friends.each { p ->
 							person(firstName: p.firstName, id: p.id, favoriteColor: p.favoriteColor)
 						}
 					}
 				}
 			}
 			
-			html { }
+			html {
+			}
 		}	
 	}
 	

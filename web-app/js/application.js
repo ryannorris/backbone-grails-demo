@@ -58,7 +58,7 @@ Medullan.Router = (function() {
 
 			// load the person data from the server, typically done from a
 			// bootstrap
-			this.friends.fetch();
+			this.friends.reset(window.friendsBootstrap);
 		},
 
 		// maps to friend/friendId (friend/3)
@@ -69,6 +69,9 @@ Medullan.Router = (function() {
 			// by loading
 			// right from the current client state
 			this.selectedFriend.set(this.friends.get(friendId).toJSON());
+			
+			// change the window title
+			document.title = "About Your Friend: " + this.selectedFriend.get('firstName');
 
 			// just like with "/", now toggle to hide the list and show the
 			// detail

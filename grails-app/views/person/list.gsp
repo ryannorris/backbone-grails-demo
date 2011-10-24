@@ -1,12 +1,15 @@
 <html>
     <head>
-        <title>Backbone MVC Demo</title>
+        <title>My Friends</title>
         <meta name="layout" content="main" />
         <style>
         	.names { width: 300px; }
         	.hidden { display: none; }
         	.highlight { background-color: #33FF33; cursor: pointer; }
         </style>
+        <script type="text/javascript">
+			var friendsBootstrap = <g:jsonify target="${friends}" />;
+        </script>
     </head>
     <body>
 		
