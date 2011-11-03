@@ -26,7 +26,7 @@ grails.project.dependency.resolution = {
 	}
 
 
-	def gebVersion = "0.6.0"
+	def gebVersion = "0.6.1"
 	def seleniumVersion = "2.9.0"
 
 	dependencies {
@@ -35,12 +35,13 @@ grails.project.dependency.resolution = {
 		test("org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion") { exclude "xml-apis" }
 		test "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
 		test "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
+		test "org.seleniumhq.selenium:selenium-support:2.9.0"
 		runtime "mysql:mysql-connector-java:5.1.18"
 	}
 
 	plugins {
 		test ":spock:0.5-groovy-1.7"
-		test ":geb:0.6.0"
+		test ":geb:0.6.1"
 		test ":easyb:2.0.5"
 		test ":database-migration:1.0"
 		test ":code-coverage:1.2.4"

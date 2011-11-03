@@ -48,8 +48,10 @@ scenario "add a new friend", {
 	}
 
 	and "we want to add a new friend", {
+		
 		page.newFriendName << "Misha"
-		page.favoriteColor = 2
+		// page.favoriteColor.click()
+		page.favoriteColor = "Blue"
 		page.saveButton.click()
 
 		assert page.friendLink("Misha")
