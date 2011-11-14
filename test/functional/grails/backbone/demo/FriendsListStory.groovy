@@ -66,7 +66,7 @@ scenario "view friend information", {
 	then "we go to the friend detail page", { at FriendDetailPage }
 
 	and "their favorite color is displayed", {
-		assert page.favoriteColor.text() == "Red"
+		assert page.favoriteColor.text() == "Blue"
 	}
 }
 
